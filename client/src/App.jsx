@@ -4,14 +4,24 @@ import Home from './pages/Home'
 import Info from './pages/Info'
 import Quiz from './pages/Quiz'
 import TechTuesday from './pages/TechTuesday'
+import { ROUTING } from './constants'
 
+const routes = [
+  { path: ROUTING.HOME, element: <Home /> },
+  { path: ROUTING.INFO, element: <Info /> },
+  { path: ROUTING.QUIZ, element: <Quiz /> },
+  { path: ROUTING.TECH, element: <TechTuesday /> },
+
+
+]
 const App = () => {
   return (
     <Routes>
-        <Route path='/home' element={<Home/>}></Route>
-        <Route path='/home/info' element={<Info/>}></Route>
-        <Route path='/home/quiz' element={<Quiz/>}></Route>
-        <Route path='/home/techtuesday' element={<TechTuesday/>}></Route>
+      {routes.map((route) => {
+        return (
+          <Route path={route.path} element={route.element} key={route.path} />
+        )
+      })}
     </Routes>
   )
 }
