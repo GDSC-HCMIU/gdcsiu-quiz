@@ -5,7 +5,7 @@ import { ROUTING } from '../constants';
 const TOPICS = [
   {
     id: 1,
-    imgSrc: 'https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/375052451_602603018751773_2038067975002769783_n.png?_nc_cat=107&ccb=1-7&_nc_sid=52f669&_nc_ohc=9aOj3FtOKWAAX8t1bk3&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfCy2xBvyLwOoRM11bG7rNuep_weEXkhUC1feJAXUatjiA&oe=650A6BB8',
+    imgSrc: 'https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/375052451_602603018751773_2038067975002769783_n.png?_nc_cat=107&ccb=1-7&_nc_sid=52f669&_nc_ohc=3_n_lph7hv8AX-wlxCb&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfCjB3Lw7HphLOuqSPw8QjJxvQsBubDdgLTEa9r_anNzmg&oe=65105A78',
     title: 'Google Developer Student Clubs - HCMIU',
     description: 'Developer Student Clubs are university-based communities supported by Google Developers.',
     buttonName: 'More info',
@@ -79,7 +79,7 @@ const Card = () => {
   }
 
   return (
-    <div className="/md:mx-auto md:max-w-8xl md:flex-col md:grid md:grid-cols-3 md:gap-7 md:p-4">
+    <div className="md:mx-auto md:max-w-8xl md:flex-col md:grid md:grid-cols-3 md:gap-7 md:p-4">
       {TOPICS.map((topics) => {
         return (<Post {...topics} key={topics.id} />)
       })}

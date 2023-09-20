@@ -27,8 +27,8 @@ const Timer = ({ initialTime, onTimeExpired }) => {
   };
 
   return (
-    <div className="flex-col font-bold text-2xl mb-4 text-start">
-      {formatTime(seconds)}
+    <div className="flex-col font-bold text-3xl max-md:text-2xl mb-4 text-start">
+      Time: {formatTime(seconds)}
     </div>
   );
 };

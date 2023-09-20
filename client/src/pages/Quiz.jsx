@@ -25,6 +25,7 @@ const Quiz = () => {
   const checkAnswer = () => {
     console.log(selectedOption);
     if (selectedOption === questionBank[currentQuestion].answer_content) {
+      console.log('Hooray!');
       setScore((score) => score + 1);
     }
   };
@@ -52,19 +53,20 @@ const Quiz = () => {
   return (
     <div className="p-4">
       <BackButton />
-      <h1 className="font-bold text-2xl mb-4 text-center">GDSC-IU Quiz</h1>
+      <h1 className="font-bold text-3xl max-md:text-2xl mb-4 text-center mt-4">Google Developer Student Clubs - HCMIU Quiz</h1>
       {!quizStart ? (
         <div className="flex place-content-center">
           <button
-            className="bg-slate-800 text-white text-2xl px-4 py-1 rounded-lg w-fit hover:bg-slate-200 hover:text-black"
+            className="bg-slate-800 text-white text-xl px-4 py-1 rounded-lg hover:bg-slate-200 hover:text-black w-fit max-md:w-5/6"
             onClick={startQuiz}>
-            Start
+            Start the quiz
           </button>
         </div>
       ) : !quizEnd ? (
-        <div className="flex-col">
-          <div className="container mx-auto">
-            <h1 className="font-semibold mb-2 text-lg mb-4">
+        <div className="md:mx-auto md:max-w-8xl md:flex-col md:grid md:grid-cols-3 md:gap-7 md:p-4">
+          <Timer initialTime={120} onTimeExpired={handleTimeExpired} />
+          <div className="container mx-auto p-4 border-2 border-black rounded-md">
+            <h1 className="font-semibold text-lg mb-4">
               Question {currentQuestion + 1}:{' '}
               {questionBank[currentQuestion].content}
             </h1>
@@ -86,7 +88,6 @@ const Quiz = () => {
               <div>???</div>
             )}
           </div>
-          <Timer initialTime={120} onTimeExpired={handleTimeExpired} />
         </div>
       ) : (
         <Score score={score} />
