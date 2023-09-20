@@ -1,5 +1,11 @@
 export const questionBank = [
   {
+    id: 1,
+    content: 'Tên đầy đủ của từ GDSC là gì?',
+    type: 'short-answer',
+    answer_content: 'Google Developer Student Clubs',
+  },
+  {
     id: 2,
     content: 'GDSC-IU là câu lạc bộ thiên về:',
     type: 'multiple-choices',
@@ -24,13 +30,6 @@ export const questionBank = [
       },
     ],
   },
-  {
-    id: 1,
-    content: 'Tên đầy đủ của từ GDSC là gì?',
-    type: 'short-answer',
-    answer_content: 'Google Developer Student Clubs',
-  },
-
   {
     id: 3,
     content: 'Câu lạc bộ GDSC-IU là đơn vị trực thuộc:',

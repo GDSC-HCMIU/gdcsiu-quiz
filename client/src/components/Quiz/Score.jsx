@@ -3,7 +3,7 @@ import BackButton from '../BackButton';
 
 const Score = ({ score }) => {
   return (
-    <div>
+    <div className="flex-col text-2xl text-center">
       <h2>Results</h2>
       <h4>Your score is: {score}</h4>
     </div>
