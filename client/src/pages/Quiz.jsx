@@ -22,6 +22,7 @@ const Quiz = () => {
     setQuizStart(true);
     setQuizEnd(false);
     setTimeExpired(false);
+    setCurrentQuestion(0);
   },[])
 
   const handleOptionChange = (e) => {
@@ -97,7 +98,7 @@ const Quiz = () => {
         <div className="flex flex-col">
           <Score score={score} />
           <button
-            className="bg-slate-800 text-white text-xl px-4 py-1 rounded-lg hover:bg-slate-200 hover:text-black mx-auto"
+            className="mt-4 bg-slate-800 text-white text-xl px-4 py-1 rounded-lg hover:bg-slate-200 hover:text-black mx-auto"
             onClick={handleReply}>
             Play again! 
           </button>
