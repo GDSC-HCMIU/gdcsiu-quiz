@@ -6,9 +6,9 @@ export const MainLayout = (props) => {
   const { children } = props
 
   return (
-    <div>
+    <React.Fragment>
       {children}
       <Footer />
-    </div>
+    </React.Fragment>
   )
 }

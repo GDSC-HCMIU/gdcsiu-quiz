@@ -8,7 +8,7 @@ const MultipleChoicesQuiz = ({
   onSubmit,
 }) => {
   return (
-    <div>
+    <div className>
       <form onSubmit={onSubmit}>
         <Option
           options={question.option}
@@ -16,7 +16,7 @@ const MultipleChoicesQuiz = ({
           onOptionChange={onOptionChange}
         />
         <button
-          className="bg-slate-800 text-white px-4 py-1 rounded-lg w-fit hover:bg-slate-200 hover:text-black"
+          className="bg-slate-800 text-white px-4 py-1 rounded-lg w-full mt-4 hover:bg-slate-200 hover:text-black h-9 max-md:w-full"
           type="submit">
           Submit
         </button>

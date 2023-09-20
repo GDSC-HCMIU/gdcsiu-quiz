@@ -7,8 +7,7 @@ import { EXTERNAL_LINK, ROUTING } from '../../constants';
 
 export const Footer = () => {
   return (
-    <div className="bottom-0 inset-x-0 h-max bg-gray-600 text-white max-sm:sticky  max-sm:mt-5 max-sm:h-12 ">
-      <div className="flex">
+    <div className="fixed bottom-0 inset-x-0 h-max bg-gray-600 text-white max-sm:sticky max-sm:mt-5 max-sm:h-12">
         <div className="container mx-auto text-center">
           <ul className="flex justify-center text-lg mt-5 space-x-4 max-sm:hidden">
             <li>
@@ -27,7 +26,7 @@ export const Footer = () => {
           </ul>
           <div className="max-sm:bg-gray-600 max-sm:inset-x-0 w-full max-sm:p-2">
             <img
-              className="mx-auto mt-5  w-12 max-sm:mt-2 max-sm:w-12 max-sm:mt-0"
+              className="mx-auto mt-5  w-12 max-sm:mt-2 max-sm:w-12"
               src={CLUB_LOGO}
               alt="logo"
             />
@@ -36,7 +35,6 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-      </div>
     </div>
   );
 };

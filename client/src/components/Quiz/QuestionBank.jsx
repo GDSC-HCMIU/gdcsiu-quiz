@@ -43,7 +43,7 @@ export const questionBank = [
       },
       {
         index: 2,
-        content: 'Hội sinh viên trường ĐHQT',
+        content: 'Hội sinh viên trường Đại học Quốc Tế',
       },
       {
         index: 3,
@@ -114,7 +114,7 @@ export const questionBank = [
   {
     id: 7,
     content:
-      'Tính tới thời điểm hiện tại ,clb GDSC-IU đã hoạt động được bao nhiêu năm rồi?',
+      'Tính tới thời điểm hiện tại ,Câu lạc bộ GDSC-IU đã hoạt động được bao nhiêu năm rồi?',
     type: 'short-answer',
     answer_content: '3',
   },
@@ -148,7 +148,7 @@ export const questionBank = [
     id: 9,
     content: 'Đúng/Sai: Máy chơi game Xbox là sản phẩm của công ty Microsoft.',
     type: 'multiple-choices',
-    answer_content: 'Đ',
+    answer_content: 'Đúng',
     answer_index: 1,
     option: [
       {
@@ -162,10 +162,10 @@ export const questionBank = [
     ],
   },
   {
-    id: 7,
+    id: 10,
     content: 'GDSC có bao nhiêu ban?',
     type: 'multiple-choices',
-    answer_content: '5',
+    answer_content: '6',
     answer_index: 4,
     option: [
       {
