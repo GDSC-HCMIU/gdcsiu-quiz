@@ -23,14 +23,18 @@ const Quiz = () => {
     setQuizEnd(false);
     setTimeExpired(false);
     setCurrentQuestion(0);
-  },[])
+    setScore(0);
+  }, []);
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
   };
 
   const checkAnswer = () => {
-    if (selectedOption.toLowerCase() === questionBank[currentQuestion].answer_content.toLowerCase()) {
+    if (
+      selectedOption.toLowerCase() ===
+      questionBank[currentQuestion].answer_content.toLowerCase()
+    ) {
       setScore((score) => score + 1);
     }
   };
@@ -58,7 +62,9 @@ const Quiz = () => {
   return (
     <div className="p-4">
       <BackButton />
-      <h1 className="font-bold text-3xl max-md:text-2xl mb-4 text-center mt-4">Google Developer Student Clubs - HCMIU Quiz</h1>
+      <h1 className="font-bold text-3xl max-md:text-2xl mb-4 text-center mt-4">
+        Google Developer Student Clubs - HCMIU Quiz
+      </h1>
       {!quizStart ? (
         <div className="flex place-content-center">
           <button
@@ -100,7 +106,7 @@ const Quiz = () => {
           <button
             className="mt-4 bg-slate-800 text-white text-xl px-4 py-1 rounded-lg hover:bg-slate-200 hover:text-black mx-auto"
             onClick={handleReply}>
-            Play again! 
+            Play again!
           </button>
         </div>
       )}
