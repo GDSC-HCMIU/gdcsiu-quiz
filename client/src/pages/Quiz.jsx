@@ -24,6 +24,7 @@ const Quiz = () => {
     setTimeExpired(false);
     setCurrentQuestion(0);
     setScore(0);
+    setSelectedOption('');
   }, []);
 
   const handleOptionChange = (e) => {
