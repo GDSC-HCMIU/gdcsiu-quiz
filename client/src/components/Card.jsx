@@ -39,7 +39,7 @@ const Card = () => {
   const handleNavigate = useCallback((page) => {
     switch (page) {
       case 'more': {
-        navigate(ROUTING.INFO);
+        window.open('https://www.facebook.com/dsc.hcmiu');
         return;
       }
       case 'quiz': {

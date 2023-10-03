@@ -1,10 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import BackButton from '../components/BackButton';
 import { questionBank } from '../components/Quiz/QuestionBank';
 import Score from '../components/Quiz/Score';
 import ShortAnswerQuiz from '../components/Quiz/ShortAnswerQuiz';
 import MultipleChoicesQuiz from '../components/Quiz/MultipleChoicesQuiz';
 import Timer from '../components/Quiz/Timer';
+import shuffle from 'lodash/shuffle';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -13,6 +14,8 @@ const Quiz = () => {
   const [quizStart, setQuizStart] = useState(false);
   const [quizEnd, setQuizEnd] = useState(false);
   const [timeExpired, setTimeExpired] = useState(false);
+  const [randomeQuestion, setRandomQuestion] = useState(shuffle(questionBank));
+
 
   const startQuiz = () => {
     setQuizStart(true);
@@ -25,6 +28,7 @@ const Quiz = () => {
     setCurrentQuestion(0);
     setScore(0);
     setSelectedOption('');
+    setRandomQuestion(shuffle(questionBank));
   }, []);
 
   const handleOptionChange = (e) => {
@@ -34,14 +38,14 @@ const Quiz = () => {
   const checkAnswer = () => {
     if (
       selectedOption.toLowerCase() ===
-      questionBank[currentQuestion].answer_content.toLowerCase()
+      randomeQuestion[currentQuestion].answer_content.toLowerCase()
     ) {
       setScore((score) => score + 1);
     }
   };
 
   const handleNextQuestion = () => {
-    if (currentQuestion + 1 < questionBank.length) {
+    if (currentQuestion + 1 < randomeQuestion.length) {
       setCurrentQuestion((currentQuestion) => currentQuestion + 1);
       setSelectedOption('');
     } else {
@@ -80,18 +84,18 @@ const Quiz = () => {
           <div className="container mx-auto p-4 border-2 border-black rounded-md">
             <h1 className="font-semibold text-lg mb-4">
               Question {currentQuestion + 1}:&nbsp;
-              {questionBank[currentQuestion].content}
+              {randomeQuestion[currentQuestion].content}
             </h1>
-            {questionBank[currentQuestion].type === 'short-answer' ? (
+            {randomeQuestion[currentQuestion].type === 'short-answer' ? (
               <ShortAnswerQuiz
-                question={questionBank[currentQuestion]}
+                question={randomeQuestion[currentQuestion]}
                 selectedOption={selectedOption}
                 onChange={handleOptionChange}
                 onSubmit={handleFormSubmit}
               />
-            ) : questionBank[currentQuestion].type === 'multiple-choices' ? (
+            ) : randomeQuestion[currentQuestion].type === 'multiple-choices' ? (
               <MultipleChoicesQuiz
-                question={questionBank[currentQuestion]}
+                question={randomeQuestion[currentQuestion]}
                 selectedOption={selectedOption}
                 onOptionChange={handleOptionChange}
                 onSubmit={handleFormSubmit}

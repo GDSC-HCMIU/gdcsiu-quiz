@@ -82,32 +82,32 @@ export const questionBank = [
   },
   {
     id: 5,
-    content: 'GDSC-IU đã trải qua đến đời Chapter lead thứ mấy?',
+    content: 'IoT là viết tắt của thuật ngữ nào?',
     type: 'short-answer',
-    answer_content: '3',
+    answer_content: 'Internet of Things',
   },
   {
     id: 6,
-    content: 'Hiện nay model mới nhất của ChatGPT là model nào?',
+    content: 'Tên tập đoàn quản lí công ty Google?',
     type: 'multiple-choices',
-    answer_content: '4.0',
+    answer_content: 'Alphabet Inc.',
     answer_index: 3,
     option: [
       {
         index: 1,
-        content: '3.0',
+        content: 'Cisco',
       },
       {
         index: 2,
-        content: '3.5',
+        content: 'NEST Lab',
       },
       {
         index: 3,
-        content: '4.0',
+        content: 'Alphabet Inc.',
       },
       {
         index: 4,
-        content: '5.0',
+        content: 'Mozilla',
       },
     ],
   },
@@ -121,10 +121,10 @@ export const questionBank = [
   {
     id: 8,
     content:
-      "Trong lĩnh vực công nghệ di động, viết tắt 'iOS' đề cập đến hệ điều hành dành cho thiết bị của hãng nào?",
+      "Hiện nay hệ điều hành Android được điều hành bởi công ty nào ?",
     type: 'multiple-choices',
-    answer_content: 'Apple',
-    answer_index: 2,
+    answer_content: 'Google',
+    answer_index: 4,
     option: [
       {
         index: 1,
@@ -140,7 +140,7 @@ export const questionBank = [
       },
       {
         index: 4,
-        content: 'Samsung',
+        content: 'Google',
       },
     ],
   },
@@ -186,4 +186,18 @@ export const questionBank = [
       },
     ],
   },
+  {
+    id: 11,
+    content:
+      'CPU gọi đầy đủ là gì?',
+    type: 'short-answer',
+    answer_content: 'Central Processing Unit',
+  },
+  {
+    id: 12,
+    content:
+      'Trong lĩnh vực công nghệ mạng, viết tắt "URL" đại diện cho khái niệm gì?',
+    type: 'short-answer',
+    answer_content: 'Uniform Resource Locator',
+  }
 ];
